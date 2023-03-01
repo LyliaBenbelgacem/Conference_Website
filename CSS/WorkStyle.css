@@ -1,0 +1,87 @@
+/* Start Global rules */
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Global rules  */
+/* Start media queries */
+/* Small */
+@media(min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/* Medium */
+@media(min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/* Large */
+@media(min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+/* End media queries */
+/* Start header */
+/* Start Form Styling  */
+.container{
+    padding-top: 100px;
+    padding-bottom:100px;
+}
+h1{
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+form{
+    /* flex-basis:100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input{
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin:10px;
+    width: 100%;
+}
+.container form input:focus{
+    border-color:none ;
+}
+.container form input[type="submit"]{
+    background-color:#19c8fa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border:none;
+    width: 30%;
+    margin-left: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* End Forme Styling  */
