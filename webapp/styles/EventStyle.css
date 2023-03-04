@@ -1,0 +1,219 @@
+/* Start variable */
+:root{
+    --main-color:#10cab7;
+    --secondry-color:#2c2755;
+    --section-padding:60px;
+    --section-background:#f6f6f6;
+}
+/* End Variable */
+html{
+    scroll-behavior: smooth;
+}
+/*Start global rules*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right:15px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*End global rules*/
+/* Start media queries */
+@media(max-width:767px){
+    .special-heading{
+        font-size: 60px;
+    }
+    .special-heading + p {
+        margin:-20px;
+    }
+}
+     /* small */
+@media (min-width:768px){
+    .container{
+        width: 750 px;
+    }
+}
+    /* Medium */
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+    /* Large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+@media(max-width:991px){
+    .about .about-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .about-content .image::after,.about .about-content .image::before{
+        display: none;
+    }
+    .about .about-content .image{
+        margin: 0 auto 60px;
+    }
+}
+/* End media queries */
+ /* Start Component */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+.special-heading + p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+/* End Component */
+/* Start About */
+.about{
+    padding-top:var(--section-padding);
+    padding-bottom:calc(var(--section-padding) + 60mpx);
+}
+.about .about-content{
+    margin-top: 100px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .about-content .image{
+    position: relative;
+    width:250px;
+    height: 375px;
+}
+.about .about-content .image::before {
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.about .about-content .image::after {
+    content: "";
+    top: -40px;
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    right: -150px;
+}
+.about .about-content .image img{
+    max-width: 100%;
+}
+.about .about-content .text{
+    flex-basis: calc(100% - 500px);
+}
+.about .about-content .text p:first-of-type{
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.about .about-content .text p:last-of-type{
+    line-height:2;
+    color: #777;
+}
+.about .about-content .text hr{
+    width: 50%;
+    display: inline-block;
+    border-color:var(--main-color);
+}
+/* Start Table  */
+table {
+    width:95%;
+}
+table .first-line{
+    background-color:var(--main-color);
+    color: white;
+}
+table tr td{
+    border: 1px solid black ;
+    padding: 10px;
+    text-align: center;
+}
+table tr td p{
+    line-height: 150%; 
+    margin-top: 5px;
+    margin-bottom: 5px"
+}
+/* End Table  */
+/* End About  */
+/* Start Registration  */
+.registration{
+    padding-top:var(--section-padding);
+    padding-bottom:calc(var(--section-padding) + 60mpx);
+}
+@media (max-width:767px){
+    #Registration .special-heading{
+        font-size: 60px;
+    }
+}
+.form-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input{
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin:10px;
+    width: 100%;
+}
+.container form input:focus{
+    border-color:none ;
+}
+.container form input[type="submit"]{
+    background-color:var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border:none;
+    width: 30%;
+    margin-left: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* End Registration  */
+/* Start footer */
+footer{
+    background-color:#eee;
+    /* color: white; */
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+footer span{
+    font-weight: bold;
+    color: var(--main-color);
+}
+  /* End footer */
